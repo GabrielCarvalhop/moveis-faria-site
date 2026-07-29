@@ -38,23 +38,23 @@
   </div>
 </header>
 
-<div id="mobile-menu" class="mobile-menu" style="position:fixed;inset:0;z-index:1100;background:#1C1916;flex-direction:column;">
-  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px clamp(20px,5vw,48px);">
+<div id="mobile-menu" class="mobile-menu mobile-menu-bg" style="position:fixed;inset:0;z-index:1100;flex-direction:column;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px clamp(20px,5vw,48px);position:relative;">
     <div style="background:#FFFFFF;padding:8px 12px;border-radius:6px;display:inline-flex;">
       <img src="assets/img/logo.png" alt="Móveis Faria" style="height:44px;width:auto;display:block;">
     </div>
-    <button id="menu-close-btn" aria-label="Fechar menu" style="width:44px;height:44px;background:transparent;border:none;cursor:pointer;color:#FFFFFF;">
+    <button id="menu-close-btn" aria-label="Fechar menu" style="width:44px;height:44px;background:transparent;border:none;cursor:pointer;color:#FFFFFF;position:relative;">
       <svg width="22" height="22" viewBox="0 0 22 22"><line x1="2" y1="2" x2="20" y2="20" stroke="currentColor" stroke-width="2"></line><line x1="20" y1="2" x2="2" y2="20" stroke="currentColor" stroke-width="2"></line></svg>
     </button>
   </div>
-  <nav style="flex:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:24px;padding:0 clamp(28px,8vw,64px);">
-    <a href="#hero" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:#FFFFFF;text-decoration:none;">Início</a>
-    <a href="#categorias" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:#FFFFFF;text-decoration:none;">Móveis</a>
-    <a href="#ambientes" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:#FFFFFF;text-decoration:none;">Ambientes</a>
-    <a href="#sobmedida" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:#FFFFFF;text-decoration:none;">Sob medida</a>
-    <a href="#sobre" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:#FFFFFF;text-decoration:none;">Sobre</a>
-    <a href="#localizacao" style="font-family:'Cormorant Garamond',serif;font-size:34px;font-weight:500;color:#FFFFFF;text-decoration:none;">Contato</a>
-    <a href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" style="margin-top:12px;display:inline-flex;align-items:center;gap:10px;background:#FFFFFF;color:#1C1916;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;padding:16px 28px;border-radius:7px;text-decoration:none;">Falar no WhatsApp</a>
+  <nav class="mobile-nav-list" style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(28px,8vw,48px);position:relative;overflow-y:auto;">
+    <a class="mobile-nav-item" href="#hero"><span class="mobile-nav-num">01</span>Início<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="#categorias"><span class="mobile-nav-num">02</span>Móveis<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="#ambientes"><span class="mobile-nav-num">03</span>Ambientes<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="#sobmedida"><span class="mobile-nav-num">04</span>Sob medida<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="#sobre"><span class="mobile-nav-num">05</span>Sobre<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="#localizacao"><span class="mobile-nav-num">06</span>Contato<span class="arrow">&rarr;</span></a>
+    <a href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" style="margin-top:28px;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#FFFFFF;color:#1C1916;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;padding:16px 28px;border-radius:7px;text-decoration:none;">Falar no WhatsApp</a>
   </nav>
 </div>
 
@@ -549,9 +549,8 @@
 </section>
 
 <section id="ctafinal" class="tex-dark" style="position:relative;padding:clamp(80px,12vw,160px) clamp(20px,5vw,64px);background:#1C1916;overflow:hidden;">
-  <div style="position:absolute;inset:0;background:repeating-linear-gradient(135deg,#5D3A26 0,#5D3A26 2px,#1C1916 2px,#1C1916 30px);opacity:0.5;"></div>
   <div style="position:relative;max-width:820px;margin:0 auto;text-align:center;" data-reveal="">
-    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,5vw,56px);line-height:1.12;color:#FFFFFF;margin:0 0 24px;">Vamos encontrar o móvel certo para o seu ambiente?</h2>
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,5vw,56px);line-height:1.12;color:#FFFFFF;margin:0 auto 24px;max-width:640px;text-wrap:balance;">Vamos encontrar o móvel certo para o seu ambiente?</h2>
     <p style="font-family:'Manrope',sans-serif;font-size:17px;line-height:1.8;color:rgba(255,255,255,0.8);margin:0 0 40px;">Seja para sua casa, área gourmet, pousada, restaurante ou outro espaço, conte para nós o que você está procurando. Uma conversa pelo WhatsApp é o primeiro passo.</p>
     <a class="btn-fill-light" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;padding:20px 40px;border-radius:7px;text-decoration:none;transition:background .3s ease;">Chamar no WhatsApp</a>
     <p style="font-family:'Manrope',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);margin:20px 0 0;">Envie sua ideia, referência ou dúvida.</p>
@@ -565,9 +564,9 @@
       <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(30px,4vw,46px);line-height:1.1;color:#1C1916;margin:0 0 20px;">Venha nos visitar</h2>
       <p style="font-family:'Manrope',sans-serif;font-size:16px;line-height:1.75;color:rgba(28,25,22,0.75);margin:0 0 32px;">Conheça nossos móveis de perto e converse conosco sobre as possibilidades para o seu espaço.</p>
       <div style="display:flex;flex-direction:column;gap:16px;margin-bottom:32px;">
-        <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(28,25,22,0.12);padding-bottom:12px;">
-          <span style="font-family:'Manrope',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;color:rgba(28,25,22,0.55);">Endereço</span>
-          <span style="font-family:'Manrope',sans-serif;font-size:14.5px;font-style:italic;color:rgba(28,25,22,0.6);">a confirmar — região de Tiradentes, MG</span>
+        <div style="display:flex;justify-content:space-between;gap:20px;border-bottom:1px solid rgba(28,25,22,0.12);padding-bottom:12px;">
+          <span style="font-family:'Manrope',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;color:rgba(28,25,22,0.55);flex-shrink:0;">Endereço</span>
+          <span style="font-family:'Manrope',sans-serif;font-size:14.5px;color:#1C1916;text-align:right;max-width:280px;">Av. Ministro Gabriel Passos, 1432 — Santa Cruz de Minas, MG</span>
         </div>
         <div style="display:flex;justify-content:space-between;border-bottom:1px solid rgba(28,25,22,0.12);padding-bottom:12px;">
           <span style="font-family:'Manrope',sans-serif;font-size:13px;text-transform:uppercase;letter-spacing:0.06em;color:rgba(28,25,22,0.55);">Horário</span>
@@ -579,7 +578,7 @@
         </div>
       </div>
       <div style="display:flex;flex-wrap:wrap;gap:16px;">
-        <a class="btn-outline-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Tiradentes,MG" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Manrope',sans-serif;font-size:15px;font-weight:600;padding:15px 29px;border:1px solid;border-radius:7px;text-decoration:none;transition:background .3s ease,color .3s ease;">Como chegar</a>
+        <a class="btn-outline-dark" href="https://www.google.com/maps/dir/?api=1&amp;destination=Av.%20Ministro%20Gabriel%20Passos%2C%201432%2C%20Santa%20Cruz%20de%20Minas%2C%20MG" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Manrope',sans-serif;font-size:15px;font-weight:600;padding:15px 29px;border:1px solid;border-radius:7px;text-decoration:none;transition:background .3s ease,color .3s ease;">Como chegar</a>
         <a class="btn-fill-dark" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Gostaria%20de%20saber%20mais%20sobre%20como%20visitar%20a%20loja." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;padding:16px 30px;border-radius:7px;text-decoration:none;transition:background .3s ease;">Falar pelo WhatsApp</a>
       </div>
     </div>
@@ -620,7 +619,7 @@
     </div>
     <div>
       <span style="font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#F2EFEA;display:block;margin-bottom:18px;">Localização</span>
-      <p style="font-family:'Manrope',sans-serif;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;">Tiradentes / Região de Tiradentes — MG</p>
+      <p style="font-family:'Manrope',sans-serif;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;">Av. Ministro Gabriel Passos, 1432 — Santa Cruz de Minas, MG</p>
     </div>
   </div>
   <p style="font-family:'Manrope',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);text-align:center;margin:28px 0 0;">© 2026 Móveis Faria. Todos os direitos reservados.</p>

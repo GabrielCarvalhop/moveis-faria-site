@@ -220,6 +220,46 @@ p { max-width: 640px; }
 
 .mobile-menu { display: none; }
 .mobile-menu.is-open { display: flex; }
+@media (min-width: 861px) { .mobile-menu.is-open { display: none; } }
+
+@media (max-width: 860px) {
+  .mobile-menu-bg {
+    background: rgba(28, 25, 22, 0.86);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+  }
+  .mobile-nav-list { gap: 0; }
+  .mobile-nav-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 18px 2px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 500;
+    color: #FFFFFF;
+    text-decoration: none;
+    transition: background-color .25s ease;
+  }
+  .mobile-nav-list > .mobile-nav-item:first-child { border-top: 1px solid rgba(255, 255, 255, 0.14); }
+  .mobile-nav-item:active { background: rgba(255, 255, 255, 0.06); }
+  .mobile-nav-num {
+    font-family: 'Manrope', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    color: rgba(224, 200, 168, 0.65);
+    flex-shrink: 0;
+  }
+  .mobile-nav-item .arrow {
+    margin-left: auto;
+    font-size: 17px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform .3s ease;
+  }
+  .mobile-nav-item:active .arrow { transform: translateX(4px); }
+}
 
 /* ===== Botoes ===== */
 .nav-link, .icon-adaptive { color: #FFFFFF; }
@@ -245,8 +285,19 @@ p { max-width: 640px; }
 .link-on-dark { color: #FFFFFF; border-color: rgba(255,255,255,0.4); }
 .link-on-dark:hover { border-color: #FFFFFF; color: #F2EFEA; }
 
-.fab { background: #1C1916; }
+.fab {
+  background: #1C1916;
+  animation: fab-glow 2.6s ease-in-out infinite;
+}
 .fab:hover { background: #5D3A26; transform: scale(1.06); }
+
+@keyframes fab-glow {
+  0%, 100% { box-shadow: 0 8px 24px rgba(28,25,22,0.3), 0 0 0 0 rgba(160,102,58,0.35); }
+  50% { box-shadow: 0 8px 24px rgba(28,25,22,0.3), 0 0 18px 5px rgba(160,102,58,0.45); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fab { animation: none; box-shadow: 0 8px 24px rgba(28,25,22,0.3), 0 0 14px 3px rgba(160,102,58,0.4); }
+}
 
 /* ===== FAQ ===== */
 .faq-toggle .chevron { transform: rotate(0deg); transition: transform .3s ease; }
