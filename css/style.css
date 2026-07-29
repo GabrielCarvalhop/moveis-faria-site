@@ -218,6 +218,14 @@ p { max-width: 640px; }
   .nav-mobile-toggle { display: flex; }
 }
 
+/* Categorias: no mobile o grid vira 1 coluna e o "order" alternado
+   do desktop bagunçava a sequência (texto/foto trocando de lugar
+   a cada item). Força padrão único: texto sempre antes da foto. */
+@media (max-width: 720px) {
+  #categorias .cat-text { order: 1 !important; }
+  #categorias .cat-media { order: 2 !important; }
+}
+
 .mobile-menu { display: none; }
 .mobile-menu.is-open { display: flex; }
 @media (min-width: 861px) { .mobile-menu.is-open { display: none; } }
