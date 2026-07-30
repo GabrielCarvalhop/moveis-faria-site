@@ -95,6 +95,33 @@ body { margin: 0; }
 a { color: inherit; }
 p { max-width: 640px; }
 
+/* Trava o scroll enquanto o preloader decide/roda a animação inicial */
+html.is-loading, html.is-loading body { overflow: hidden; height: 100%; }
+
+/* ===== Preloader (logo se desenhando) ===== */
+#preloader {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#preloader-logo {
+  width: min(300px, 60vw);
+  height: auto;
+  overflow: visible;
+}
+.pl-path {
+  stroke-width: 1.4;
+  fill-opacity: 0;
+  vector-effect: non-scaling-stroke;
+}
+@media (max-width: 480px) {
+  #preloader-logo { width: min(220px, 70vw); }
+}
+
 /* ===== Textura sutil (grain) ===== */
 /* SVG feTurbulence — ruído fino aplicado em opacidade muito baixa para dar
    materialidade ao fundo sem parecer papel de parede. */
