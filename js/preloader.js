@@ -73,7 +73,12 @@ document.addEventListener('DOMContentLoaded', function () {
       },
       '-=0.15'
     )
-    .to({}, { duration: 0.4 }) // segura a logo completa por um instante
+    .to(paths, {
+      strokeOpacity: 0,
+      duration: 0.3,
+      ease: 'power1.out',
+    }) // some com o traço -- só o preenchimento fica, com os vazados (MF, anel) corretos
+    .to({}, { duration: 0.3 }) // segura a logo completa por um instante
     .to(preloader, {
       opacity: 0,
       duration: 0.6,

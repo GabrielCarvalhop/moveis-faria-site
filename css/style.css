@@ -114,7 +114,7 @@ html.is-loading, html.is-loading body { overflow: hidden; height: 100%; }
   overflow: visible;
 }
 .pl-path {
-  stroke-width: 1.4;
+  stroke-width: 1.6;
   fill-opacity: 0;
   vector-effect: non-scaling-stroke;
 }
