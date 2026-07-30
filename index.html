@@ -13,7 +13,18 @@
   // se vai animar. Roda de forma síncrona (antes da 1ª pintura) e nunca
   // fica presa: se o JS parar por aqui, o resto da página nunca chegou
   // a ser bloqueado de verdade (o bloqueio real é feito por CSS abaixo).
-  document.documentElement.classList.add('is-loading');
+  //
+  // O preloader só deve tocar 1x por sessão do navegador -- se a pessoa
+  // já viu a Home e navega de volta pra ela (ex.: do Catálogo, clicando
+  // em "Móveis"), não faz sentido travar o scroll de novo pra uma
+  // animação que não vai nem rodar (ver js/preloader.js).
+  try {
+    if (!sessionStorage.getItem('mfPreloaderPlayed')) {
+      document.documentElement.classList.add('is-loading');
+    }
+  } catch (e) {
+    document.documentElement.classList.add('is-loading');
+  }
 </script>
 </head>
 <body>

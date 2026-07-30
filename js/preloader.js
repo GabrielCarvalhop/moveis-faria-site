@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
   var preloader = document.getElementById('preloader');
   if (!preloader) return;
 
+  var CHAVE_SESSAO = 'mfPreloaderPlayed';
   var heroEls = document.querySelectorAll('.hero-anim');
 
   function unlockScroll() {
@@ -17,11 +18,37 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   }
 
-  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-  if (reduceMotion || typeof gsap === 'undefined') {
+  function marcarComoTocado() {
+    try {
+      sessionStorage.setItem(CHAVE_SESSAO, '1');
+    } catch (e) {
+      /* modo privado / storage bloqueado -- sem problema, só volta a
+         tocar em cada navegação, não trava nada */
+    }
+  }
+
+  // Já tocou nesta sessão (ex.: a pessoa foi pro Catálogo e voltou pra
+  // Home clicando em "Móveis") -- pula direto pro site, sem tela branca
+  // nem travar o scroll de novo. Só deve animar na primeira vez.
+  var jaTocou = false;
+  try {
+    jaTocou = sessionStorage.getItem(CHAVE_SESSAO) === '1';
+  } catch (e) {
+    jaTocou = false;
+  }
+  if (jaTocou) {
     showSiteInstantly();
     return;
   }
+
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (reduceMotion || typeof gsap === 'undefined') {
+    marcarComoTocado();
+    showSiteInstantly();
+    return;
+  }
+
+  marcarComoTocado();
 
   var paths = preloader.querySelectorAll('.pl-path');
   var finished = false;
