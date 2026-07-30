@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catálogo — Móveis Faria</title>
+<meta name="description" content="Catálogo de móveis rústicos em madeira maciça e de demolição da Móveis Faria: mesas, cadeiras, bancos, aparadores, cristaleiras e peças sob medida na região de Tiradentes, MG.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div style="background:#FFFFFF;color:#1C1916;font-family:'Manrope',sans-serif;overflow-x:hidden;position:relative;width:100%;">
+
+<header id="topo" style="position:fixed;top:0;left:0;right:0;z-index:1000;">
+  <div class="header-bg" style="position:absolute;inset:0;"></div>
+  <div style="position:relative;max-width:1320px;margin:0 auto;padding:16px clamp(20px,5vw,48px);display:flex;align-items:center;justify-content:space-between;gap:24px;">
+    <a href="index.html" style="display:inline-flex;align-items:center;">
+      <img src="assets/img/logo.png" alt="Móveis Faria" class="header-logo-img" style="height:56px;width:auto;display:block;">
+    </a>
+    <nav class="nav-desktop" style="align-items:center;gap:34px;">
+      <a class="nav-link" href="index.html" style="font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.02em;text-decoration:none;">Início</a>
+      <a class="nav-link" href="index.html#categorias" style="font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.02em;text-decoration:none;">Móveis</a>
+      <a class="nav-link is-current" href="catalogo.html" style="font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.02em;text-decoration:none;">Catálogo</a>
+      <a class="nav-link" href="index.html#ambientes" style="font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.02em;text-decoration:none;">Ambientes</a>
+      <a class="nav-link" href="index.html#sobmedida" style="font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.02em;text-decoration:none;">Sob medida</a>
+      <a class="nav-link" href="index.html#localizacao" style="font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;letter-spacing:0.02em;text-decoration:none;">Contato</a>
+    </nav>
+    <div style="display:flex;align-items:center;gap:14px;">
+      <a class="nav-desktop btn-fill-dark" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" style="align-items:center;gap:8px;font-family:'Manrope',sans-serif;font-size:14px;font-weight:600;padding:12px 22px;border-radius:7px;text-decoration:none;transition:background .3s ease;">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.6"></path><path d="M8.5 8.7c.2-.5.5-.5.7-.5h.5c.2 0 .4 0 .6.4l.8 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.3.6 1 1.4 1.7 1.9.2.1.4.1.5 0l.6-.5c.2-.1.4-.2.6-.1l1.7.8c.3.1.3.3.3.5v.5c0 .3 0 .6-.5.9-.6.4-1.4.5-2.1.3-1.5-.4-3-1.4-4.1-2.6-1.1-1.2-2-2.7-2.3-4.2-.1-.6 0-1.3.4-1.8Z" fill="currentColor"></path></svg>
+        Falar no WhatsApp
+      </a>
+      <button id="menu-toggle-btn" class="nav-mobile-toggle icon-adaptive" aria-label="Abrir menu" style="width:44px;height:44px;align-items:center;justify-content:center;background:transparent;border:none;cursor:pointer;">
+        <svg width="22" height="16" viewBox="0 0 22 16"><rect width="22" height="2" fill="currentColor"></rect><rect y="7" width="22" height="2" fill="currentColor"></rect><rect y="14" width="22" height="2" fill="currentColor"></rect></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div id="mobile-menu" class="mobile-menu mobile-menu-bg" style="position:fixed;inset:0;z-index:1100;flex-direction:column;">
+  <div style="display:flex;justify-content:space-between;align-items:center;padding:16px clamp(20px,5vw,48px);position:relative;">
+    <div style="background:#FFFFFF;padding:8px 12px;border-radius:6px;display:inline-flex;">
+      <img src="assets/img/logo.png" alt="Móveis Faria" style="height:44px;width:auto;display:block;">
+    </div>
+    <button id="menu-close-btn" aria-label="Fechar menu" style="width:44px;height:44px;background:transparent;border:none;cursor:pointer;color:#FFFFFF;position:relative;">
+      <svg width="22" height="22" viewBox="0 0 22 22"><line x1="2" y1="2" x2="20" y2="20" stroke="currentColor" stroke-width="2"></line><line x1="20" y1="2" x2="2" y2="20" stroke="currentColor" stroke-width="2"></line></svg>
+    </button>
+  </div>
+  <nav class="mobile-nav-list" style="flex:1;display:flex;flex-direction:column;justify-content:center;padding:0 clamp(28px,8vw,48px);position:relative;overflow-y:auto;">
+    <a class="mobile-nav-item" href="index.html"><span class="mobile-nav-num">01</span>Início<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="index.html#categorias"><span class="mobile-nav-num">02</span>Móveis<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="catalogo.html"><span class="mobile-nav-num">03</span>Catálogo<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="index.html#ambientes"><span class="mobile-nav-num">04</span>Ambientes<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="index.html#sobmedida"><span class="mobile-nav-num">05</span>Sob medida<span class="arrow">&rarr;</span></a>
+    <a class="mobile-nav-item" href="index.html#localizacao"><span class="mobile-nav-num">06</span>Contato<span class="arrow">&rarr;</span></a>
+    <a href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" style="margin-top:28px;display:inline-flex;align-items:center;justify-content:center;gap:10px;background:#FFFFFF;color:#1C1916;font-family:'Manrope',sans-serif;font-weight:700;font-size:15px;padding:16px 28px;border-radius:7px;text-decoration:none;">Falar no WhatsApp</a>
+  </nav>
+</div>
+
+<a class="fab" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" aria-label="Falar no WhatsApp" style="position:fixed;bottom:22px;right:22px;z-index:900;width:56px;height:56px;border-radius:50%;color:#FFFFFF;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 24px rgba(28,25,22,0.3);text-decoration:none;transition:transform .25s ease,background .25s ease;">
+  <svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M12 2a10 10 0 0 0-8.6 15L2 22l5.2-1.4A10 10 0 1 0 12 2Z" stroke="currentColor" stroke-width="1.5"></path><path d="M8.5 8.7c.2-.5.5-.5.7-.5h.5c.2 0 .4 0 .6.4l.8 1.7c.1.2 0 .4-.1.6l-.5.6c-.1.2-.1.3 0 .5.3.6 1 1.4 1.7 1.9.2.1.4.1.5 0l.6-.5c.2-.1.4-.2.6-.1l1.7.8c.3.1.3.3.3.5v.5c0 .3 0 .6-.5.9-.6.4-1.4.5-2.1.3-1.5-.4-3-1.4-4.1-2.6-1.1-1.2-2-2.7-2.3-4.2-.1-.6 0-1.3.4-1.8Z" fill="currentColor"></path></svg>
+</a>
+
+<main>
+
+<section class="cat-hero tex-dark">
+  <div class="cat-hero-inner">
+    <span class="eyebrow" style="color:#E0C8A8;margin:0 0 18px;">Catálogo</span>
+    <h1>Nossas peças</h1>
+    <p>Conheça os móveis disponíveis, com medidas e valores de referência. Cada peça pode ser adaptada — fale com a gente pelo WhatsApp para conversar sobre o seu espaço.</p>
+  </div>
+</section>
+
+<section id="lista" class="cat-lista tex-light">
+
+  <div class="cat-filtros" id="cat-filtros">
+    <div class="cat-filtros-inner">
+      <div class="cat-chips" id="cat-chips" role="group" aria-label="Filtrar por categoria"></div>
+      <div class="cat-controles">
+        <div class="cat-busca">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="7" cy="7" r="5" stroke="currentColor" stroke-width="1.5"></circle><path d="M11 11l3.5 3.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"></path></svg>
+          <input type="search" id="cat-busca" placeholder="Buscar peça" aria-label="Buscar peça">
+        </div>
+        <select id="cat-faixa" aria-label="Faixa de preço">
+          <option value="">Todos os preços</option>
+          <option value="0-1500">Até R$ 1.500</option>
+          <option value="1500-3000">R$ 1.500 a R$ 3.000</option>
+          <option value="3000-5000">R$ 3.000 a R$ 5.000</option>
+          <option value="5000-">Acima de R$ 5.000</option>
+        </select>
+        <select id="cat-ordem" aria-label="Ordenar por">
+          <option value="destaque">Destaques</option>
+          <option value="menor">Menor preço</option>
+          <option value="maior">Maior preço</option>
+          <option value="az">Nome (A–Z)</option>
+        </select>
+      </div>
+    </div>
+  </div>
+
+  <div class="cat-meta">
+    <span id="cat-contador" aria-live="polite"></span>
+    <button type="button" id="cat-limpar" class="link-arrow" hidden>Limpar filtros <span class="arrow">&rarr;</span></button>
+  </div>
+
+  <div class="cat-grid" id="cat-grid"></div>
+
+  <div class="cat-vazio" id="cat-vazio" hidden>
+    <h3>Nenhuma peça encontrada</h3>
+    <p>Tente ajustar os filtros ou buscar por outro termo. Se procura algo específico, podemos avaliar sob medida.</p>
+    <a class="btn-fill-dark" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Procuro%20uma%20pe%C3%A7a%20espec%C3%ADfica%20e%20n%C3%A3o%20encontrei%20no%20cat%C3%A1logo." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:10px;font-family:'Manrope',sans-serif;font-size:15px;font-weight:700;padding:16px 30px;border-radius:7px;text-decoration:none;transition:background .3s ease;">Falar sobre o que procuro</a>
+  </div>
+
+  <p class="cat-aviso">Valores de referência para peças em madeira maciça e de demolição. Podem variar conforme medidas, tipo de madeira e acabamento escolhidos.</p>
+
+</section>
+
+<section id="ctafinal" class="tex-dark" style="position:relative;padding:clamp(80px,12vw,160px) clamp(20px,5vw,64px);background:#1C1916;overflow:hidden;">
+  <div style="position:relative;max-width:1000px;margin:0 auto;text-align:center;" data-reveal="">
+    <h2 style="font-family:'Cormorant Garamond',serif;font-weight:500;font-size:clamp(32px,4.2vw,68px);line-height:1.12;color:#FFFFFF;margin:0 auto 26px;max-width:760px;text-wrap:balance;">Encontrou algo que combina com o seu espaço?</h2>
+    <p style="font-family:'Manrope',sans-serif;font-size:clamp(17px,1.1vw,19px);line-height:1.8;color:rgba(255,255,255,0.8);margin:0 auto 40px;max-width:640px;">Envie o nome da peça pelo WhatsApp que conversamos sobre medidas, acabamento e disponibilidade.</p>
+    <a class="btn-fill-light" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Vi%20o%20cat%C3%A1logo%20no%20site%20e%20gostaria%20de%20saber%20mais." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:12px;font-family:'Manrope',sans-serif;font-size:17px;font-weight:700;padding:20px 40px;border-radius:7px;text-decoration:none;transition:background .3s ease;">Chamar no WhatsApp</a>
+    <p style="font-family:'Manrope',sans-serif;font-size:14px;color:rgba(255,255,255,0.55);margin:32px auto 0;">Atendimento na região de Tiradentes, MG.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="tex-dark" style="position:relative;background:#1C1916;padding:clamp(40px,6vw,72px) clamp(20px,5vw,64px) 24px;">
+  <div style="max-width:1320px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(220px,100%),1fr));gap:40px;padding-bottom:40px;border-bottom:1px solid rgba(255,255,255,0.12);">
+    <div>
+      <div style="background:#FFFFFF;padding:10px 14px;border-radius:6px;display:inline-flex;margin-bottom:18px;">
+        <img src="assets/img/logo.png" alt="Móveis Faria" style="height:56px;width:auto;display:block;">
+      </div>
+      <p style="font-family:'Manrope',sans-serif;font-size:14px;line-height:1.7;color:rgba(255,255,255,0.6);margin:0;max-width:260px;">Móveis rústicos, madeira maciça e peças sob medida na região de Tiradentes, Minas Gerais.</p>
+    </div>
+    <div>
+      <span style="font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#F2EFEA;display:block;margin-bottom:18px;">Navegação</span>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a class="footer-link" href="index.html" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Início</a>
+        <a class="footer-link" href="index.html#categorias" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Móveis</a>
+        <a class="footer-link" href="catalogo.html" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Catálogo</a>
+        <a class="footer-link" href="index.html#ambientes" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Ambientes</a>
+        <a class="footer-link" href="index.html#sobmedida" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Sob medida</a>
+        <a class="footer-link" href="index.html#localizacao" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Contato</a>
+      </div>
+    </div>
+    <div>
+      <span style="font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#F2EFEA;display:block;margin-bottom:18px;">Contato</span>
+      <div style="display:flex;flex-direction:column;gap:12px;">
+        <a class="footer-link" href="https://wa.me/5532998381286?text=Ol%C3%A1!%20Conheci%20voc%C3%AAs%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20m%C3%B3veis." target="_blank" rel="noopener" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">WhatsApp: (32) 99838-1286</a>
+        <span style="font-family:'Manrope',sans-serif;font-size:14.5px;font-style:italic;color:rgba(255,255,255,0.5);">E-mail a confirmar</span>
+        <a class="footer-link" href="https://www.instagram.com/moveisfaria/" target="_blank" rel="noopener" style="font-family:'Manrope',sans-serif;font-size:14.5px;text-decoration:none;">Instagram @moveisfaria</a>
+      </div>
+    </div>
+    <div>
+      <span style="font-family:'Manrope',sans-serif;font-size:12px;font-weight:700;letter-spacing:0.1em;text-transform:uppercase;color:#F2EFEA;display:block;margin-bottom:18px;">Localização</span>
+      <p style="font-family:'Manrope',sans-serif;font-size:14.5px;line-height:1.7;color:rgba(255,255,255,0.75);margin:0;">Av. Ministro Gabriel Passos, 1432 — Santa Cruz de Minas, MG</p>
+    </div>
+  </div>
+  <p style="font-family:'Manrope',sans-serif;font-size:13px;color:rgba(255,255,255,0.4);text-align:center;margin:28px auto 0;max-width:none;">© 2026 Móveis Faria. Todos os direitos reservados.</p>
+</footer>
+
+</div>
+
+<script src="js/produtos.js"></script>
+<script src="js/catalogo.js"></script>
+<script src="js/script.js"></script>
+</body>
+</html>
