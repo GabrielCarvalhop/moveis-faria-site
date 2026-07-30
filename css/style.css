@@ -279,6 +279,13 @@ html.is-loading, html.is-loading body { overflow: hidden; height: 100%; }
   }
   .mobile-nav-list > .mobile-nav-item:first-child { border-top: 1px solid rgba(255, 255, 255, 0.14); }
   .mobile-nav-item:active { background: rgba(255, 255, 255, 0.06); }
+
+  /* Telas baixas (ex.: 360x640): com 7 itens o botão do WhatsApp abria
+     cortado e só aparecia rolando. Aperta o menu para tudo caber. */
+  @media (max-height: 700px) {
+    .mobile-nav-item { padding: 13px 2px; font-size: 23px; }
+    .mobile-nav-list > a[href*="wa.me"] { margin-top: 16px !important; padding: 13px 24px !important; }
+  }
   .mobile-nav-num {
     font-family: 'Manrope', sans-serif;
     font-size: 11px;
@@ -661,6 +668,22 @@ html.is-loading, html.is-loading body { overflow: hidden; height: 100%; }
 
 /* ---- Ajustes mobile ---- */
 @media (max-width: 860px) {
+  /* O "Consultar" é o CTA de conversão e o texto tem só ~23px de altura.
+     Aumenta a área de toque para 44px sem deslocar o sublinhado. */
+  .cat-card-cta,
+  #cat-limpar { position: relative; }
+  .cat-card-cta::after,
+  #cat-limpar::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 44px;
+  }
+  .cat-chip { padding: 11px 16px; }
+
   .cat-filtros { padding: 14px clamp(20px, 5vw, 64px); }
   .cat-filtros-inner { flex-direction: column; align-items: stretch; gap: 12px; }
   .cat-chips { margin: 0 calc(clamp(20px, 5vw, 64px) * -1); padding: 0 clamp(20px, 5vw, 64px) 2px; }
